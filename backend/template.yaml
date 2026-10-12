@@ -1,0 +1,58 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Vehicle Marketplace — serverless backend (Phase 1 MVP)
+
+Globals:
+  Function:
+    Runtime: nodejs20.x
+    Handler: app.handler
+    Timeout: 10
+    MemorySize: 256
+    Environment:
+      Variables:
+        TABLE_NAME: !Ref VehiclesTable
+
+Resources:
+  VehiclesTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: PK
+          AttributeType: S
+        - AttributeName: SK
+          AttributeType: S
+      KeySchema:
+        - AttributeName: PK
+          KeyType: HASH
+        - AttributeName: SK
+          KeyType: RANGE
+
+  VehiclesFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref VehiclesTable
+      Events:
+        ListVehicles:
+          Type: Api
+          Properties:
+            Path: /vehicles
+            Method: get
+        GetVehicle:
+          Type: Api
+          Properties:
+            Path: /vehicles/{id}
+            Method: get
+        CreateVehicle:
+          Type: Api
+          Properties:
+            Path: /vehicles
+            Method: post
+
+Outputs:
+  ApiUrl:
+    Description: API Gateway endpoint URL
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"

@@ -1,0 +1,13 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; color: #1a1a1a; }
+main { max-width: 900px; margin: 0 auto; padding: 2rem 1rem; }
+h1 { font-size: 1.75rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+.card { border: 1px solid #ddd; border-radius: 8px; padding: 1rem; text-decoration: none; color: inherit; display: block; }
+.card h2 { margin: 0 0 0.5rem; font-size: 1.1rem; }
+.card:hover { border-color: #999; }
+.price { font-size: 1.25rem; font-weight: 600; }
+.status { color: #555; text-transform: capitalize; }
+.search { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; }
+.search input { flex: 1; padding: 0.5rem; font-size: 1rem; }
+.search button { padding: 0.5rem 1rem; font-size: 1rem; cursor: pointer; }
