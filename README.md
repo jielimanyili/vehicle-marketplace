@@ -1,8 +1,8 @@
 # Vehicle Marketplace — Modernization Demo
 
-A demo that re-architects a legacy **vehicle-selling application** onto a modern **serverless + Next.js** stack — the target state for a Karsun-style full-stack modernization.
+A demo that re-architects a legacy **vehicle-selling application** onto a modern **serverless + Next.js** stack — the target state for a full-stack modernization.
 
-> Built to match Karsun's required stack: React.js / Node.js, serverless AWS (Lambda, API Gateway, DynamoDB, S3, Kinesis), GraphQL/REST, MySQL (RDS/Aurora), and AI (Agentic + RAG via Bedrock).
+> The target stack: React.js / Node.js, serverless AWS (Lambda, API Gateway, DynamoDB, S3, Kinesis), GraphQL/REST, MySQL (RDS/Aurora), and AI (Agentic + RAG via Bedrock).
 
 ## Why Next.js (not plain React)
 The public storefront is SEO-critical — buyers find listings via search. Next.js App Router gives **SSR/SSG for crawlable, fast-first-paint listing pages**, with `"use client"` islands for interactive parts (filters, search). The internal tooling surface would stay a plain SPA. See `ARCHITECTURE.md`.
