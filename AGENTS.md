@@ -3,7 +3,7 @@
 > Instructions for AI coding agents working in this repo.
 
 ## Project
-A modernization demo: a legacy vehicle-selling app re-architected onto Next.js (App Router) + AWS serverless (Lambda, API Gateway, DynamoDB, S3) with a Bedrock RAG assistant. Monorepo: `frontend/` (Next.js) and `backend/` (AWS SAM).
+A modernization demo: an existing vehicle-selling app re-architected onto Next.js (App Router) + AWS serverless (Lambda, API Gateway, DynamoDB, S3) with a Bedrock RAG assistant. Monorepo: `frontend/` (Next.js) and `backend/` (AWS SAM).
 
 ## Commands
 - backend deploy: `cd backend && sam build && sam deploy --guided`

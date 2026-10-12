@@ -1,6 +1,6 @@
 # Vehicle Marketplace — Modernization Demo
 
-A demo that re-architects a legacy **vehicle-selling application** onto a modern **serverless + Next.js** stack — the target state for a full-stack modernization.
+A demo that re-architects an existing **vehicle-selling application** onto a modern **serverless + Next.js** stack — the target state for a full-stack modernization.
 
 > The target stack: React.js / Node.js, serverless AWS (Lambda, API Gateway, DynamoDB, S3, Kinesis), GraphQL/REST, MySQL (RDS/Aurora), and AI (Agentic + RAG via Bedrock).
 

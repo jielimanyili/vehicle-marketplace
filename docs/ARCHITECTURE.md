@@ -1,7 +1,7 @@
 # Architecture — Vehicle Marketplace Modernization
 
 ## 1. Overview
-A modernization demo: a legacy vehicle-selling application re-architected to a modern **serverless + Next.js** target state. It demonstrates a modern full-stack — React/Node.js, serverless AWS, GraphQL/REST, event streaming, MySQL (RDS), and RAG/AI — in a shippable, verifiable way.
+A modernization demo: an existing vehicle-selling application re-architected to a modern **serverless + Next.js** target state. It demonstrates a modern full-stack — React/Node.js, serverless AWS, GraphQL/REST, event streaming, MySQL (RDS), and RAG/AI — in a shippable, verifiable way.
 
 ## 2. Goals / Non-goals
 **Goals**
